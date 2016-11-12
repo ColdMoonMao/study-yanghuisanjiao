@@ -4,16 +4,19 @@
 <head>
  	<meta charset="UTF-8">
  	<title>杨辉三角形</title>
+ 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
  	<style>
- 	 * {
+ 	   * {
  	 	text-align: center;
  	 }
- 	 input{
- 	 	text-align: left;
- 	 }
- 	 #result{
- 	 	padding-left: 20px;
- 	 }
+ 	 
+ 	 input {
+ 	  	text-align: left;
+ 	  }
+ 	  
+ 	  #result {
+ 	   	padding-left: 20px;
+ 	   }
  	</style>
  	<!--  	<script>
  	var n = 15; //总行数
@@ -69,39 +72,39 @@
  	 	var n = Number(num.value);
  	 	// document.write('<h2>' + '杨辉三角形&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + '</h2>');
  	 	// 循环行数
- 	 	if (n>25) {
- 	 		result.innerHTML='请输入小于25的数字,否则会卡住';
+ 	 	if (n > 25) {
+ 	 	 	result.innerHTML = '请输入小于25的数字,否则会卡住';
  	 	}
- 	 	if (n<=25) {
- 	 		result.innerHTML='';
+ 	 	if (n <= 25) {
+ 	 	 	result.innerHTML = '';
 
- 	 	for (var i = 1; i <= n; i++) {
- 	 	 	// 输出每行元素前面空格;
- 	 	 	for (var j = n - i; j >= 1; j--) {
- 	 	 	 	result.innerHTML += '';
- 	 	 	}
- 	 	 	// 输出每行元素个数;
- 	 	 	for (var k = 1; k <= i; k++) {
- 	 	 	 	result.innerHTML += col(i, k);
- 	 	 	 	result.innerHTML += '&nbsp;&nbsp;&nbsp;&nbsp;';
- 	 	 	}
- 	 	 	result.innerHTML += '<br>';
-
-
- 	 	 	// document.write('1');
- 	 	 	// document.write('</br>');
- 	 	 	function col(r, c) {
-
- 	 	 	 	if (c == 1) {
- 	 	 	 	 	return 1;
+ 	 	 	for (var i = 1; i <= n; i++) {
+ 	 	 	 	// 输出每行元素前面空格;
+ 	 	 	 	for (var j = n - i; j >= 1; j--) {
+ 	 	 	 	 	result.innerHTML += '';
  	 	 	 	}
- 	 	 	 	if (c == r) {
- 	 	 	 	 	return 1;
- 	 	 	 	} else {
- 	 	 	 	 	return (col(r - 1, c - 1) + col(r - 1, c));
+ 	 	 	 	// 输出每行元素个数;
+ 	 	 	 	for (var k = 1; k <= i; k++) {
+ 	 	 	 	 	result.innerHTML += col(i, k);
+ 	 	 	 	 	result.innerHTML += '&nbsp;&nbsp;&nbsp;&nbsp;';
+ 	 	 	 	}
+ 	 	 	 	result.innerHTML += '<br>';
+
+
+ 	 	 	 	// document.write('1');
+ 	 	 	 	// document.write('</br>');
+ 	 	 	 	function col(r, c) {
+
+ 	 	 	 	 	if (c == 1) {
+ 	 	 	 	 	 	return 1;
+ 	 	 	 	 	}
+ 	 	 	 	 	if (c == r) {
+ 	 	 	 	 	 	return 1;
+ 	 	 	 	 	} else {
+ 	 	 	 	 	 	return (col(r - 1, c - 1) + col(r - 1, c));
+ 	 	 	 	 	}
  	 	 	 	}
  	 	 	}
- 	 	}
  	 	}
  	}
  	</script>
