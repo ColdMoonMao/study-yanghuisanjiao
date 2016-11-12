@@ -61,7 +61,7 @@
  	 	<input type="text" id="num">
  	 	<button id="cal">输出</button>
  	</p>
- 	<p></p>
+ 	<p>不建议输入25以上的数字</p>
  	<p id="result"></p>
  	<script>
  	var num = document.getElementById('num');
@@ -72,10 +72,10 @@
  	 	var n = Number(num.value);
  	 	// document.write('<h2>' + '杨辉三角形&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + '</h2>');
  	 	// 循环行数
- 	 	if (n > 25) {
- 	 	 	result.innerHTML = '请输入小于25的数字,否则会卡住';
+ 	 	if (n > 50) {
+ 	 	 	result.innerHTML = '请输入小于50的数字,否则会卡住';
  	 	}
- 	 	if (n <= 25) {
+ 	 	if (n <= 50) {
  	 	 	result.innerHTML = '';
 
  	 	 	for (var i = 1; i <= n; i++) {
